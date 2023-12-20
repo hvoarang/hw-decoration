@@ -1,0 +1,146 @@
+body {
+  background-color: rgba(10, 20, 30, 1.48);
+  font-family: "Roboto";
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+}
+
+img {
+  border-radius: 8px;
+}
+
+* div {
+  margin-bottom: 20px;
+}
+
+/* PC */
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+
+
+}
+
+/* ========================================= */
+
+/* Tablet */
+@media screen and (min-width: 720px) {
+  .wrapper {
+    min-width: 480px;
+  }
+
+  img {
+    width: 422px;
+  }
+
+
+}
+
+/* ========================================= */
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    max-width: 480px;
+  }
+
+  img {
+    width: 375px;
+  }
+}
+
+/* ========================================= */
+
+
+
+
+.wrapper {
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  background-color: #ccc;
+  padding: 10px;
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 8px;
+
+  width: 1200px;
+  min-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.accordion {
+  border-radius: 8px;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-bottom: 20px;
+}
+
+.active,
+.accordion:hover {
+  border: 1px solid rgb(175, 174, 175);
+
+  background-color: #ccc;
+
+  box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+
+
+
+}
+
+.container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel {
+  border-radius: 8px;
+  padding: 0 18px;
+  display: none;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: -6px 6px 10px -5px rgba(0, 0, 0, 0.48);
+}
+
+.warning {
+  color: #fff;
+  font-size: 25px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: tomato;
+  padding: 15px;
+}
+
+.red {
+  color: red;
+  font-size: 15px;
+}

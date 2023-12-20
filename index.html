@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800&family=Roboto+Slab:wght@200;300;400;600;800;900&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <h2>homework Decoration</h2>
+    <div class="wrapper">
+      <button class="accordion">task 1</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Фоновое изображение (свойство <b>background-image</b>) применится
+          поверх свойства <b>background-color</b>. <br /><br />Но есть проблема
+          с размерами изображения. Эти размеры могут быть больше или меньше
+          размера элемента. В таком случае нужно выбрать приоритет - что именно
+          мы должны заполнить полностью - высоту или ширину элемента. При этом
+          часть изображения может быть скрыта. Или наоборот - все изображение
+          поместится, но по краям будут незаполненные фоном полосы. Это
+          известная проблема и она решается только выбором фото подходящего
+          размера и подбором цвета <b>background-color</b>, который сочетается с
+          фото (т.е. это вопрос вкуса дизайнера или разработчика).
+          <br /><br />Чаще всего необходимо заполнять высоту. Для этого
+          используется свойство <b>background-size</b> со значением cover.
+          <br /><br />Чтобы центр фонового изображения совпадал с центром
+          элемента используют свойство <b> background-position</b> со значением
+          center.
+        </p>
+
+        <h4>Задание</h4>
+        <p>
+          Заполните элемент с классом container фоновым изображением (свойство
+          <b>background-image</b>), которое расположено по ссылке
+          <b> url(../images/img/typing.jpg);</b>. Изображение должно заполнить
+          всю высоту элемента (свойство <b>background-size</b>) и находиться по
+          центру (свойство <b>background-position</b>).
+        </p>
+        <br /><br />
+        HTML <br />
+        &lt;div class=&quot;container&quot;&gt;&lt;/div&gt;
+        <p>
+          <br /><br />
+          CSS <br />
+          .container { <br />
+          max-width: 200px; <br />
+          height: 240px; <br />
+          margin: auto; <br />
+          background-color: hsla(0, 0%, 0%, 0.1); <br />
+          } <br />
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 2</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Иногда фоновое изображение должно заполнять всю ширину элемента. Для
+          этого используется свойство <b>background-size</b> со значением
+          <b>contain</b>. <br /><br />
+
+          Если остается свободное место, то по умолчанию фоновое изображение
+          будет повторяться. Чтобы избежать этого используют свойство
+          <b>background-repeat</b> со значением <b>no-repeat</b> <br /><br />
+
+          Чтобы центр фонового изображения совпадал с центром элемента
+          используют свойство <b>background-position</b> со значением
+          <b>center</b> . <br /><br />
+        </p>
+
+        <h4>Задание</h4>
+
+        <p>
+          Элемент с классом <b>container</b> имеет фоновое изображение, которое
+          находиться по центру (свойство <b>background-position</b>) .
+          Изображение должно заполнить всю ширину элемента (свойство
+          <b>background-size</b>) и не повторяться (свойство
+          <b>background-repeat</b>). <br /><br />
+          HTML <br />
+          &lt;div class=&quot;container&quot;&gt;&lt;/div&gt; <br /><br />
+
+          CSS <br />
+          .container { <br />
+          max-width: 200px; <br />
+          height: 240px; <br />
+          margin: auto; <br />
+          background-image: url("../images/typing.jpg"); background-color:
+          hsla(0, 0%, 0%, 0.1); background-position: center; }
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 3</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Иногда фоновое изображение должно заполнять всю ширину экрана и
+          занимать строго заданную высоту. <br /><br />
+
+          При этом контент расположен внутри обертки, которая равноудалена от
+          левого и правого края (<b>margin: auto</b>). <br /><br />
+
+          Для этого используется еще одна обертка, которую обычно называют
+          <b>container-fluid</b> из-за того, что она всегда словно растекается
+          (<b>fluid</b> - жидкий) на всю ширину экрана. А обертку с контентом
+          располагают внутри <b>container-fluid</b>. <br /><br />
+
+          Далее все просто - используется свойство <b>background-size</b> для
+          заполнения всей высоты и подбирается очень широкое (иногда панорамное)
+          фото. Если фото окажется не достаточно широким для особо широких
+          экранов или при использовании zoom браузера, то изображение будет
+          повторяться. Чтобы избежать этого, используют свойство
+          <b>background-repeat</b> со значением <b>no-repeat</b>. <br /><br />
+
+          Чтобы центр фонового изображения совпадал с центром элемента
+          используют свойство background-position со значением <b>center</b>.
+          <br />
+        </p>
+        <h4>Задание</h4>
+
+        <p>
+          Элемент с классом <b>container-fluid</b> имеет фоновое изображение,
+          которое находится по центру (свойство <b>background-position</b>) и не
+          повторяeтся (свойство <b>background-repeat</b>). <br /><br />
+
+          Изображение должно заполнить всю высоту и, насколько это возможно, всю
+          ширину элемента (свойство <b>background-size</b>). <br /><br />
+        </p>
+        HTML <br />
+        &lt;div class=&quot;container-fluid&quot;&gt; <br />
+        &lt;div class=&quot;container&quot;&gt; <br />
+        &lt;p&gt;Это пример фона на всю ширину экрана&lt;/p&gt; <br />
+        &lt;p&gt;Контент расположен по центру на затененном фоне&lt;/p&gt;
+        <br />
+        &lt;/div&gt; <br />
+        &lt;/div&gt; <br />
+        <br />
+        CSS <br />
+        <p>
+          .container-fluid { <br />
+          height: 200px; <br />
+          background-image: url("../images/typing.jpg"); <br />
+          background-repeat: no-repeat; <br />
+          background-position: center; <br />
+          } <br />
+          <br />
+
+          .container { <br />
+          max-width: 480px; <br />
+          height: 100%; <br />
+          margin: auto;<br />
+          padding-top: 2rem; <br />
+          box-sizing: border-box; <br />
+          text-align: center; <br />
+          color: #fff; <br />
+          background-color: hsla(0, 0%, 0%, 0.1);<br />
+          } <br /><br />
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 4</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Иногда фон (цвет и изображение) должен отображаться не под всей
+          площадью блока (включая <b>border</b>, <b>padding</b> и
+          <b>content</b> <b>box</b>), а только под некоторой его частью.
+          <br /><br />
+
+          Для выбора нужного отображения используют свойство
+          <b>background-clip</b>. У этого свойства значение по умолчанию
+          <b>border-box</b>. <br /><br />
+          Остальные значения (значения указывают с чего должно начинаться
+          отображение):
+        </p>
+        <ul>
+          <li>
+            <b>padding-box </b>для отображения под всем элементом, кроме
+            <b>border</b>
+          </li>
+          <li>
+            <b>content-box</b> для отображения под всем элементом, кроме
+            <b>border</b> и <b>padding</b>;
+          </li>
+          <li>
+            <b>text</b> для отображения только под текстом. Цвет текста должен
+            быть <b>transparent</b> чтобы фоновое изображение было видно в
+            качестве цвета текста.
+          </li>
+        </ul>
+        <p class="warning">
+          Значение `<b>text</b>` может не работать в браузерах на основе
+          `<b>chromium</b>`, поэтому следует дополнительно использовать правило
+          с вендорным префиксом <b>webkit-background-clip: text</b>`-` перед
+          записью `<b>background-clip: text</b>`.
+        </p>
+        <h3>Задание</h3>
+        <p>
+          В <b>html</b> есть элементы с атрибутом <b>data-clip</b> с разными
+          значениями. Эти атрибуты выступают в качестве селекторов. <br /><br />
+
+          Примени значения атрибута <b>data-clip</b> в качестве значения для
+          свойства <b>background-clip</b>. Для свойства <b>text</b> используй
+          запись с вендорным префиксом и только затем обычную запись правила.
+          <br /><br />
+
+          Обрати внимание на то, как изменяется отображение фона (цвета и
+          изображения) в элементе.
+        </p>
+        HTML <br />
+        <br />
+        &lt;ul class=&quot;items&quot;&gt; <br />
+        &lt;li class=&quot;item&quot;&gt;&lt;/li&gt; <br />
+        &lt;li class=&quot;item&quot;
+        data-clip=&quot;padding-box&quot;&gt;&lt;/li&gt; <br />
+        &lt;li class=&quot;item&quot;
+        data-clip=&quot;content-box&quot;&gt;&lt;/li&gt; <br />
+        &lt;li class=&quot;item text&quot; data-clip=&quot;text&quot;&gt; <br />
+        Текст <br />
+        &lt;/li&gt; <br />
+        &lt;/ul&gt; <br />
+        <br />
+        CSS <br />
+
+        <p>
+          .text { <br />
+          font-size: 48px; <br />
+          font-weight: 800; <br />
+          text-align: center; <br />
+          color: transparent; <br />
+          } <br />
+          <br />
+          .items { <br />
+          list-style: none; <br />
+          display: flex; <br />
+          flex-wrap: wrap; <br />
+          } <br />
+          <br />
+          .item { <br />
+          width: 240px; <br />
+          height: 100px; <br />
+          box-sizing: border-box; <br />
+          padding: 10px; <br />
+          border: 10px dashed orangered; <br />
+          margin: 0 auto 1rem; <br />
+          background-color: hsla(0, 0%, 0%, 0.1); <br />
+          background-image: url("../images/typing.jpg"); <br />
+          background-size: contain; <br />
+          background-position: center; <br />
+          background-repeat: no-repeat; <br />
+          } <br />
+          [data-clip="padding-box"] { <br />
+          } <br />
+          [data-clip="content-box"] { <br />
+          } <br />
+          [data-clip="text"] { <br />
+          } <br />
+        </p>
+        <h3>Ответ</h3>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 5</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Тег <b>img</b> имеет два обязательных атрибута - <b>src</b> и
+          <b>alt</b>. Атрибут <b>alt</b> содержит текст и в силу того что файл
+          <b>html</b> загружается раньше, чем файлы, содержащиеся в ссылках кода
+          <b>html</b>, текст будет отображен первым. <br /><br />
+
+          Затем браузер подгрузит изображение по ссылке <b>src</b> и заменит
+          (заместит) текст изображением. Это создает множество нежелательных
+          побочных эффектов. <br /><br />
+
+          В этом задании мы рассмотрим прием, который избавляет от ряда таких
+          нежелательных эффектов. Суть приема заключается в размещении
+          изображения внутри блочного элемента и изменения у изображения
+          значения display с <b>inline</b> на <b>block</b>.
+        </p>
+        <br />
+        <h4>Задание</h4>
+        <p>
+          Изображение размещается внутри элементов с классом
+          <b>wrp-image</b> для которого задан размер меньший, чем размер
+          изображения. У изображения есть класс images. Размести изображение
+          внутри элемента с классом <b>wrp-image</b> так, чтобы изображение
+          занимало <b>100%</b> ширины родительского элемента и не имело отступа
+          с <b>border-bottom</b>. <br /><br />
+
+          Для этого создай правило css с селектором-классом images и двумя
+          свойствами:
+        </p>
+        <ul>
+          <li><b>width</b></li>
+          <li><b>display</b></li>
+        </ul>
+        <br />
+        HTML
+        <br />
+        <br />
+        &lt;div class=&quot;container&quot;&gt; <br />
+        &lt;a class=&quot;wrp-image&quot; href=&quot;#&quot;&gt; <br />
+        &lt;img class=&quot;images&quot; <br />
+        src=&quot;./images/typing.jpg&quot; <br />
+        alt=&quot;Печать на клавиатуре ноутбука&quot;&gt; <br />
+        &lt;/a&gt; <br />
+        &lt;div class=&quot;wrp-image&quot;&gt; <br />
+        &lt;img class=&quot;images&quot; <br />
+        src=&quot;./images/typing.jpg&quot; <br />
+        alt=&quot;Печать на клавиатуре ноутбука&quot;&gt; <br />
+        &lt;/div&gt; <br />
+        &lt;/div&gt; <br />
+        <br />
+        <br />
+        CSS
+        <br />
+        <br />
+        <p>
+          .container { <br />
+          display: flex; <br />
+          padding-top: 15px; <br />
+          } <br />
+          <br />
+          .wrp-image { <br />
+          width: 240px; <br />
+          border: 1px solid gold; <br />
+          margin: 0 15px 15px; <br />
+          } <br />
+          <br />
+        </p>
+        <h3>Ответ</h3>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 6</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Изображение является строчным-замещаемым элементом. Поэтому
+          изображению, в отличие от строчных элементов, можно задать размеры -
+          высоту и ширину. <br /><br />
+
+          Эти заданные высота и ширина могут не совпадать с пропорциями высоты и
+          ширины изображения. Подобрать такое соотношение размеров изображения и
+          заданных размеров элемента img, чтобы сохранились пропорции и контент
+          поместился максимально помогает свойство <b>object-fit</b>.
+          <br /><br />
+
+          Использование свойства <b>object-fit</b> - это еще один способ
+          избежать проблемы несовпадения размеров. И этот способ позволяет
+          обойтись без обертки для изображения, но требует задать размер
+          изображению и подобрать подходящее значение свойства из следующего
+          набора:
+        </p>
+        <ul>
+          <li><b>fill</b></li>
+          <li><b>contain</b></li>
+          <li><b>cover</b></li>
+          <li><b>scale-down</b></li>
+        </ul>
+        <br />
+        <h4>Задание</h4>
+        <p>
+          Элементу <b>img</b> надо задать размер меньший, чем размер
+          изображения, и, к тому же, в другой пропорции. При этом необходимо
+          сохранить пропорции изображения ценой того, что часть фотографии не
+          будет отображаться. <br />
+          <br />
+
+          Для этого задай элементу с классом images
+        </p>
+        <ul>
+          <li>свойство <b>width</b> со значением <b>240px</b>;</li>
+          <li>свойство <b>height</b> со значением <b>320px</b>;</li>
+          <li>свойство <b>object-fit</b> со значением <b>cover</b>.</li>
+        </ul>
+        HTML <br /><br />
+        &lt;div class=&quot;container&quot;&gt; <br />
+        &lt;a href=&quot;#&quot;&gt; <br />
+        &lt;img class=&quot;images&quot; src=&quot;./images/typing.jpg&quot;
+        <br />
+        alt=&quot;Печать на клавиатуре ноутбука&quot;&gt; <br />
+        &lt;/a&gt; <br />
+        &lt;img class=&quot;images&quot; src=&quot;./images/typing.jpg&quot;
+        <br />
+        alt=&quot;Печать на клавиатуре ноутбука&quot;&gt; <br />
+        &lt;/div&gt; <br />
+        <br />
+        CSS
+        <br />
+        <p>
+          .container { <br />
+          display: flex; <br />
+          padding-top: 15px; <br />
+          } <br />
+          <br />
+          .images { <br />
+          border: 1px solid gold; <br />
+          margin: 0 15px 15px; <br />
+          }
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 7</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          Псевдоэлементы имеют такой же приоритет, как и элементы (теги) в
+          качестве селекторов. <br /><br />
+
+          Псевдоэлемент <b>::before</b> по умолчанию имеет значение
+          <b>inline</b> свойства <b>display</b> и находится перед элементом.
+          <br /><br />
+
+          Псевдоэлемент <b>::after</b> по умолчанию имеет значение
+          <b>inline</b> свойства <b>display</b> и располагается после элемента.
+          <br /><br />
+
+          Обязательным для пслевдоэлементов является свойство <b>content</b>.
+          <br /><br />
+
+          Если в качестве значения свойства <b>content</b> используется юникод,
+          то синтаксис юникода должен быть в формате для css, а не для
+          <b>html</b>.
+        </p>
+
+        <h4>Задание</h4>
+        <p>
+          Есть спецсимвол для открывающей кавычки (\275D) и для закрывающей
+          (\275E). <br /><br />Для класса <b>cite</b> задайте два
+          <b>css</b> свойства с псевдоэлементами <b>::before</b> и
+          <b>::after</b> так, чтобы текст внутри элемента с классом
+          <b>cite</b> на веб-странице был обернут в кавычки - вначале
+          открывающей и в конце закрывающей.
+        </p>
+        &lt;p class=&quot;cite&quot;&gt;Кавычки для цитаты&lt;/p&gt; <br />
+        <h3>Ответ</h3>
+        CSS <br />
+        <p>
+          .cite::before { <br />
+          content:; <br />
+          } <br />
+          <br />
+          .cite::after { <br />
+          content:; <br />
+          }
+        </p>
+      </div>
+
+      <button class="accordion">task 8</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          <b>vh (viewport height)</b> - относительная единица измерения.
+          Значение <b>100vh</b> равно высоте окна в браузере для отображения
+          контента (высота элемента html), а <b>1vh</b> равен 1/100 этой высоты.
+          <br /><br />
+
+          <b>vh</b> удобно использовать там, где нужно задать всю высоту окна,
+          т.к. высота в процентах привязана к высоте родительского элемента в
+          абсолютных единицах. А на практике невозможно знать заранее, какая
+          именно высота будет у окна браузера. <br /><br />
+
+          Синтаксис линейного градиента должен обязательно содержать цвет и
+          необязательные параметры:
+        </p>
+        <ul>
+          <li>
+            угол для построения градиента ( отрицательное значение угла меняет
+            направление);
+          </li>
+          <li>
+            длину (в единицах для длины, в том числе и процентах), на которой
+            должен быть применен цвет.
+          </li>
+        </ul>
+        <br /><br />
+        <h4>Задание</h4>
+        <p>
+          Задан линейный градиент для фона элемента <b>body</b>. Т.к. в
+          <b>html</b> документе нет контента, то надо задать высоту. Напомним,
+          что высота элементов и <b>body</b> в том числе, всегда определяется
+          высотой контента. Но блочным элементам высоту можно задать.
+          <br /><br />
+
+          Добавь к значениям свойства <b>linear-gradient</b> дополнительно:
+        </p>
+        <ul>
+          <li>направление и угол фона в -45deg;</li>
+          <li>75% длины для цвета hsl(270, 100%, 30%).</li>
+        </ul>
+        <p>
+          body { <br />
+          min-height: 100vh; <br />
+          background: linear-gradient(<br />
+          hsl(0, 100%, 30%) , <br />
+          hsl(270, 100%, 30%) <br />
+          );<br />
+          }
+        </p>
+        <br />
+        <p></p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 9</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+        <p>
+          К одному фону можно применить несколько линейных градиентов,
+          перечисляя их через запятую. При этом градиенты могут пересекаться и
+          накладываться один на другой. Например:
+        </p>
+        <br />
+        <p>
+          &lt;div class=&quot;box&quot;&gt;&lt;/div&gt; <br /><br />
+
+          CSS <br /><br />
+
+          .box {<br />
+          width: 200px;<br />
+          height: 100px;<br />
+          background: <br />
+          linear-gradient(90deg, red 50px, transparent 50px 100%),
+          linear-gradient( orange 50px, transparent 50px 100%);<br />
+          }
+        </p>
+        <p>
+          Если есть необходимость в повторении линейного градиента в фоне, то
+          можно использовать другое свойство - <b>repeating-linear-gradient</b>.
+          Пример:
+        </p>
+        <br />
+        <p>
+          &lt;div class=&quot;container&quot;&gt;&lt;/div&gt; <br />
+
+          CSS <br /><br />
+
+          .container { <br />
+          width: 200px;<br />
+          height: 100px; <br />
+          background: repeating-linear-gradient( orange 1px, transparent
+          2px,transparent 20px); <br />
+          } <br />
+        </p>
+        <p>
+          Перечисление нескольких линейных градиентов применимо и к
+          <b>repeating-linear-gradient</b>. Рассмотрим этот случай в задании.
+        </p>
+        <h4>Задание</h4>
+
+        <p>
+          Фон body оформлен в виде листа в линейку. Оформи фон в виде листа в
+          клеточку. Для этого
+        </p>
+        <ul>
+          <li>
+            через запятую добавь то же самое свойство
+            <b>repeating-linear-gradient</b>;
+          </li>
+          <li>
+            используй то же самое значение, добавив к нему только поворот на
+            <b>90deg</b>.
+          </li>
+        </ul>
+        <p>
+          body { <br />
+          min-height: 100vh; <br />
+          background: <br />
+          repeating-linear-gradient(#bbb 1px, transparent 2px, transparent
+          28px); <br />
+          } <br />
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <button class="accordion">task 10</button>
+      <div class="panel">
+        <h3>Теория к заданию</h3>
+
+        <p>
+          Значения <b>box-shadow</b> имеет два варианта (для внешней и
+          внутренней тени):
+        </p>
+        <ol>
+          <li>смещение-по-x смещение-по-y размытие распространение цвет.</li>
+          <li>
+            inset смещение-по-x смещение-по-y размытие распространение цвет.
+          </li>
+        </ol>
+        Где
+        <br />
+        <ul>
+          <li>
+            Смещение-по-x (<b>x-offset</b>) означает смещение тени по
+            горизонтали относительно блока. Может принимать как положительные,
+            так и отрицательные значения, положительное - смещает тень вправо от
+            блока, отрицательное – влево. Обязательное значение.
+          </li>
+          <br />
+          <li>
+            Смещение-по-y (<b>y-offset</b>) означает смещение тени по вертикали
+            относительно блока. Может принимать как положительные, так и
+            отрицательные значения, положительное - смещает тень вниз,
+            отрицательное - вверх. Обязательное значение.
+          </li>
+          <br />
+          <li>
+            Размытие (<b>blur</b>) определяет радиус размытия тени. Чем больше
+            радиус, тем сильнее размыта тень. Можно использовать только
+            положительные значения. Необязательное значение.
+          </li>
+          <br />
+          <li>
+            Распространение (<b>spread</b>) расширяет тень, утолщая ее.
+            Принимает как положительные, так и отрицательные значения.
+            Необязательное значение.
+          </li>
+          <br />
+          <li>
+            Цвет (<b>color</b>) необязательное значение. По умолчанию тень
+            черного цвета. Для задания значения можно использовать <b>hex</b>,
+            <b>rgb</b>, <b>rgba</b>
+            форматы записи цвета.
+          </li>
+          <li>inset - создаёт тень внутри блока.</li>
+        </ul>
+        <h3>Задание</h3>
+        <p>
+          Элементу <b>button</b> с классом <b>btn</b> задано свойство
+          <b>box-shadow</b>.
+          <br />
+          Необходимо добавить также это свойство с другими значениями для
+          события <b>hover</b> и <b>focus</b> и отдельно для события
+          <b>active</b>. Для этого:
+        </p>
+        <br />
+        <ul>
+          <li>
+            в коде <b>css</b> добавь свойство <b>box-shadow</b> к уже готовым
+            селекторам с псевдоклассами состояний <b>hover</b>, <b>focus</b> и
+            <b>active</b>;
+          </li>
+          <br />
+          <li>
+            для <b>hover</b> и focus значения смещение-по-x, смещение-по-y,
+            размытие и распространение равны 1px, а цвет - черный с
+            прозрачностью в .3, т.е. hsla(0,0%,0%,.3);
+          </li>
+          <br />
+          <li>
+            для <b>active</b> значения смещение-по-x, смещение-по-y, размытие и
+            распространение равны 3px, а цвет - черный с прозрачностью в .3,
+            т.е. hsla(0,0%,0%,.3). Также для <b>active</b> тень должна быть
+            внутренней, т.е. с использованием значения <b>inset</b>;
+          </li>
+        </ul>
+        <br />
+        HTML <br /><br />
+        &lt;div class=&quot;controls&quot;&gt; <br />
+        &lt;button class=&quot;btn&quot;
+        type=&quot;button&quot;&gt;Ok&lt;/button&gt; <br />
+        &lt;/div&gt;<br /><br />
+        CSS
+        <p>
+          .controls { <br />
+          padding: 1rem; <br />
+          text-align: center; <br />
+          } <br /><br />
+          .btn { <br />
+          padding: .5rem 1.75rem; <br />
+          border: none; <br />
+          background: linear-gradient( hsl(120, 100%, 35%), hsl(120, 100%,
+          20%)); <br />
+          color: #fff; <br />
+          font-size: 20px; <br />
+          cursor: pointer; <br />
+          box-shadow: 3px 3px 3px 3px hsla(0,0%,0%,.1); <br />
+          } <br />
+          <br />
+          .btn:hover, <br />
+          .btn:focus { <br />
+          } <br /><br />
+
+          .btn:active { <br />
+
+          }
+        </p>
+        <h4>Ответ:</h4>
+        <p></p>
+      </div>
+
+      <script src="./js/script.js"></script>
+    </div>
+  </body>
+</html>
